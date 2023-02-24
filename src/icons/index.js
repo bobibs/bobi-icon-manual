@@ -6,7 +6,7 @@ export default function Icon(props) {
   const { className, fill, height, name, width } = props
 
   const Component = loadable(() => import(`./${name}`))
-  
+
   return (
     <Component
       className={className} 
@@ -21,7 +21,7 @@ Icon.defaultProps = {
   className: '',
   fill: '',
   height: '16px',
-  name: 'IconArrow',
+  name: 'IconEmail',
   width: '16px'
 }
 
@@ -32,5 +32,3 @@ Icon.propTypes = {
   name: PropTypes.string,
   width: PropTypes.string
 }
-
-
