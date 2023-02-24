@@ -4,8 +4,17 @@ import PropTypes from 'prop-types'
 
 export default function Icon(props) {
   const { className, fill, height, name, width } = props
+
   const Component = loadable(() => import(`./${name}`))
-  return <Component className={className} fill={fill} height={height} width={width} />
+  
+  return (
+    <Component
+      className={className} 
+      fill={fill}
+      height={height}
+      width={width}
+      />
+    )
 }
 
 Icon.defaultProps = {
